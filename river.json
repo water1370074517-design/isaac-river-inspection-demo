@@ -1,0 +1,76 @@
+{
+  "coordinate_frame": "ENU, metres, Z up",
+  "objects": 814,
+  "route_enu_m": [
+    [
+      0.0,
+      0.0,
+      8.0
+    ],
+    [
+      12.0,
+      14.0,
+      9.0
+    ],
+    [
+      20.0,
+      32.0,
+      9.0
+    ],
+    [
+      15.0,
+      50.0,
+      10.0
+    ],
+    [
+      14.0,
+      70.0,
+      10.0
+    ],
+    [
+      24.0,
+      92.0,
+      10.0
+    ],
+    [
+      31.0,
+      90.0,
+      11.0
+    ],
+    [
+      28.0,
+      66.0,
+      11.0
+    ],
+    [
+      29.0,
+      36.0,
+      11.0
+    ],
+    [
+      0.0,
+      0.0,
+      9.0
+    ]
+  ],
+  "inspection_sites": [
+    [
+      "P1",
+      14.0,
+      24.0
+    ],
+    [
+      "P2",
+      14.0,
+      51.0
+    ],
+    [
+      "P3",
+      21.0,
+      79.0
+    ]
+  ],
+  "water": "visual surface; flat ground collider, no hydrodynamics",
+  "route": "visual guide only; never animates the PX4 vehicle",
+  "fleet_mode": false
+}

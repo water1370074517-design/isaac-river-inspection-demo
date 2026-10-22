@@ -1,0 +1,123 @@
+1
+00:00:00,800 --> 00:00:06,500
+This demo shows how an LLM and a VLM coordinate five UAVs for river inspection.
+
+2
+00:00:07,200 --> 00:00:12,500
+The LLM plans tasks and routes; the VLM detects anomalies in on-site images and videos.
+
+3
+00:00:13,000 --> 00:00:20,100
+Five UAVs take off to begin the river inspection.
+
+4
+00:00:20,700 --> 00:00:29,000
+The LLM divides the river into coverage areas and assigns one to each UAV.
+
+5
+00:00:30,000 --> 00:00:39,000
+Five onboard camera feeds show the scene in real time on the right.
+
+6
+00:01:12,000 --> 00:01:21,000
+The five UAVs head toward their assigned areas.
+
+7
+00:01:30,000 --> 00:01:40,000
+The LLM decides where each UAV should patrol; the VLM identifies where closer inspection is needed.
+
+8
+00:01:58,200 --> 00:02:06,000
+The five highlighted target routes show the initial patrol areas planned by the LLM.
+
+9
+00:02:09,000 --> 00:02:18,000
+Each UAV follows its assigned inspection route.
+
+10
+00:02:44,000 --> 00:02:49,500
+VLM inference reveals a bridge obstacle; UAV 3 reroutes to circle the bridge.
+
+11
+00:02:56,600 --> 00:03:05,000
+UAV 3 leaves a coverage gap to inspect the bridge, so the LLM replans routes for UAVs 2 and 4.
+
+12
+00:03:08,000 --> 00:03:18,000
+Following the LLM's new plan, UAVs 2 and 4 expand their patrol areas to cover the gap left by UAV 3.
+
+13
+00:03:22,000 --> 00:03:31,000
+UAV 3 inspects the bridge while UAVs 2 and 4 cover its area; VLM anomaly feedback triggers LLM fleet scheduling.
+
+14
+00:03:36,000 --> 00:03:44,000
+Area patrols continue.
+
+15
+00:03:46,500 --> 00:03:54,000
+Using VLM inference, UAV 5 identifies people fishing illegally on the riverbank.
+
+16
+00:03:56,000 --> 00:04:04,000
+UAV 5 descends and approaches the target.
+
+17
+00:04:07,000 --> 00:04:17,000
+A warning is issued to the people fishing illegally.
+
+18
+00:04:51,000 --> 00:05:00,500
+The inspection ends, and the UAVs return to base.
+
+19
+00:05:26,800 --> 00:05:35,000
+The UAVs return to the landing area and begin landing.
+
+20
+00:05:39,000 --> 00:05:48,000
+Two types of decisions shape the mission: the VLM interprets scenes; the LLM adjusts tasks and routes.
+
+21
+00:05:52,000 --> 00:06:00,000
+Images and videos provide evidence; task allocation and coverage replanning guide the fleet.
+
+22
+00:06:03,000 --> 00:06:10,000
+All five UAVs land and turn off their cameras.
+
+23
+00:06:13,000 --> 00:06:22,000
+QGC shows the flight paths for a scheduling review.
+
+24
+00:06:25,000 --> 00:06:34,000
+QGC's background map is only a backdrop; the focus is each UAV's recorded flight path.
+
+25
+00:06:39,000 --> 00:06:49,000
+Red lines show the flight paths.
+
+26
+00:06:52,500 --> 00:07:03,600
+UAV 1 retains its original task; its flight path reflects the LLM's initial area assignment.
+
+27
+00:07:04,200 --> 00:07:16,100
+UAV 2 expands into the coverage gap; its path reflects the LLM's replanning to fill that gap.
+
+28
+00:07:16,800 --> 00:07:23,800
+The LLM assigns UAV 3 to inspect the bridge, changing its patrol route to a circling path.
+
+29
+00:07:24,400 --> 00:07:31,300
+LLM rerouting expands UAV 4's patrol area, allowing it to help UAV 2 fill the coverage gap.
+
+30
+00:07:32,000 --> 00:07:41,500
+After the VLM identifies people fishing, UAV 5 approaches to observe; this local path corresponds to the alert task.
+
+31
+00:07:42,000 --> 00:07:50,800
+The VLM perceives and reasons; the LLM plans and schedules. These paths show the fleet's coordinated task execution.
