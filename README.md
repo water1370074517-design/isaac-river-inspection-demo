@@ -40,9 +40,3 @@ python validate_scene.py --asset river_fleet.usda
 ```
 
 `SHA256SUMS.txt` lists checksums for the shared files. `RELEASE_SHA256SUMS.txt` in Releases lists the video and ZIP checksums.
-
-## 中文说明
-
-这是五架无人机河道巡检的场景模型与英文字幕、英文配音演示视频。视频和场景压缩包位于上方 Releases 下载链接。
-
-用 Isaac Sim 打开 `river_fleet.usda` 即可查看可编辑场景；修改 `scene_spec.py` 和 `fleet_spec.py` 后，可用 `export_scene.py` 重新导出。场景采用米制、Z 轴向上，无外部纹理或资产引用。这里分享静态场景建模与工作流程演示，飞行控制及 Isaac/Pegasus/PX4 运行环境需另行配置。
