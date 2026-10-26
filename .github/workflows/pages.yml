@@ -1,0 +1,46 @@
+name: Publish video player
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - site/**
+      - scripts/build_pages.py
+      - preview.jpg
+      - .github/workflows/pages.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out player sources
+        uses: actions/checkout@v6
+      - name: Assemble player and verify the release video
+        run: python3 scripts/build_pages.py
+      - name: Upload static website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy video player
+        id: deployment
+        uses: actions/deploy-pages@v4
